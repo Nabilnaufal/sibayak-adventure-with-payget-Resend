@@ -6,18 +6,22 @@ Proyek ini cocok untuk bisnis penyewaan alat camping/hiking seperti tenda, carri
 
 ## Logo & Stack
 
-![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Alpine.js](https://img.shields.io/badge/Alpine.js-3-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Local_DB-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Midtrans](https://img.shields.io/badge/Midtrans-Payment-00AAE7?style=for-the-badge)
-![Resend](https://img.shields.io/badge/Resend-Mail-000000?style=for-the-badge&logo=resend&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Alpine.js-3-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=white" alt="Alpine.js">
+  <img src="https://img.shields.io/badge/Midtrans-Payment-00AAE7?style=for-the-badge" alt="Midtrans">
+  <img src="https://img.shields.io/badge/Resend-Mail-000000?style=for-the-badge&logo=resend&logoColor=white" alt="Resend">
+</p>
 
-![Neovim](https://img.shields.io/badge/Editor-Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
-![NvChad](https://img.shields.io/badge/Config-NvChad-5E81AC?style=for-the-badge&logo=neovim&logoColor=white)
-![Kitty](https://img.shields.io/badge/Terminal-Kitty-111111?style=for-the-badge&logo=gnometerminal&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Editor-Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim">
+  <img src="https://img.shields.io/badge/Config-NvChad-5E81AC?style=for-the-badge&logo=neovim&logoColor=white" alt="NvChad">
+  <img src="https://img.shields.io/badge/Terminal-Kitty-111111?style=for-the-badge&logo=gnometerminal&logoColor=white" alt="Kitty Terminal">
+</p>
 
 ## Fitur Utama
 
@@ -36,7 +40,7 @@ Proyek ini cocok untuk bisnis penyewaan alat camping/hiking seperti tenda, carri
 - PHP 8.3 atau lebih baru
 - Composer
 - Node.js dan npm
-- SQLite atau database lain yang didukung Laravel
+- MySQL
 - Akun Midtrans Sandbox untuk testing pembayaran
 
 ## Instalasi
@@ -62,13 +66,13 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Jika memakai SQLite:
+Siapkan database MySQL, lalu sesuaikan konfigurasi database di `.env`:
 
-```bash
-touch database/database.sqlite
+```sql
+CREATE DATABASE sibayak_adventure;
 ```
 
-Jalankan migrasi:
+Setelah database siap, jalankan migrasi:
 
 ```bash
 php artisan migrate
@@ -116,7 +120,12 @@ APP_ENV=local
 APP_DEBUG=true
 APP_URL=http://127.0.0.1:8000
 
-DB_CONNECTION=sqlite
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sibayak_adventure
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
 Tambahkan konfigurasi Midtrans di `.env`:
@@ -189,7 +198,7 @@ File sensitif dan lokal sudah diarahkan untuk di-ignore melalui `.gitignore`, te
 
 - `.env` dan variannya
 - `vendor` dan `node_modules`
-- database SQLite lokal
+- database lokal dan dump SQL
 - file log Laravel/Midtrans
 - cache framework dan compiled view
 - hasil build Vite
