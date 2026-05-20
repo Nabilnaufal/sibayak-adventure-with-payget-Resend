@@ -4,7 +4,7 @@ Sibayak Adventure adalah aplikasi web rental perlengkapan outdoor untuk membantu
 
 Proyek ini cocok untuk bisnis penyewaan alat camping/hiking seperti tenda, carrier, sleeping bag, sepatu hiking, headlamp, trekking pole, matras, kompor portable, dan perlengkapan outdoor lain.
 
-## Logo & Stack
+## Stack
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
