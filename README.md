@@ -138,22 +138,6 @@ MIDTRANS_IS_PRODUCTION=false
 
 Untuk email, proyek ini sudah menyiapkan konfigurasi Laravel mail dan package Resend. Saat development, `MAIL_MAILER=log` cukup aman agar email masuk ke log lokal.
 
-## Akun Seeder
-
-Jika menjalankan `UserSeeder`, akun contoh yang dibuat:
-
-```text
-Admin:
-email    : faqiharif4@gmail.com
-password : 12345678
-
-User:
-email    : naufalnabil@students.polmed.ac.id
-password : 12345678
-```
-
-Untuk public repo atau production, ganti akun, email, dan password default tersebut.
-
 ## Alur Produk
 
 1. Pengunjung membuka katalog produk.
@@ -192,19 +176,6 @@ php artisan view:cache
 
 Pastikan `.env`, database lokal, file log, cache, dan upload lokal tidak ikut masuk repository public.
 
-## Catatan Public Repository
-
-File sensitif dan lokal sudah diarahkan untuk di-ignore melalui `.gitignore`, termasuk:
-
-- `.env` dan variannya
-- `vendor` dan `node_modules`
-- database lokal dan dump SQL
-- file log Laravel/Midtrans
-- cache framework dan compiled view
-- hasil build Vite
-- upload lokal di `public/storage` dan `storage/app/public`
-- catatan testing seperti `dummy-card.txt`
-
 ## Editor & Terminal
 
 Proyek ini nyaman dikembangkan dengan Neovim/NvChad dan Kitty Terminal. Contoh workflow:
@@ -218,5 +189,7 @@ composer run dev
 Gunakan split terminal untuk menjalankan server Laravel, queue/log, dan Vite jika tidak memakai `composer run dev`.
 
 ## Lisensi
+
+Copyright (c) 2026 Naufal Nabil.
 
 Proyek ini menggunakan fondasi Laravel yang berlisensi MIT. Sesuaikan lisensi repository sesuai kebutuhan sebelum dipublish.
